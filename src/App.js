@@ -11,7 +11,7 @@ class App extends Component {
 
     this.state={
       total: 100,
-      PickUpSaving: -3.85
+      PickUpSavings: -3.85
     }
 
   }
