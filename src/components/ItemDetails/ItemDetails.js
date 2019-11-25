@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {Button, Collapse, Well, Media, Row, Col } from 'react-bootstrap';
+import { Button, Collapse, Well, Media, Row, Col } from 'react-bootstrap';
 
-class TaxesFees extends Component{
+class ItemDetails extends Component{
   state={
     open: false
   }
@@ -11,27 +11,44 @@ class TaxesFees extends Component{
       <div>
         <Button
             className="item-details-button"
-            bsStyle="link"
+            variant="link"
             onClick={()=> this.setState({open: !this.state.open})}
             >
             {this.state.open === false ? `See` : `Hide`} item details
             {this.state.open === false ? `+` : `-`}
         </Button>
         <Collapse in={this.state.open}>
-          <Well>
+          <div>
             <Media>
-              <Media.Left>
+              <Media.Body>
                 <img
                 width={100}
                 height={100}
                 alt="thumbnail"
-                src=""/>
+                src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6022/6022903_sd.jpg;maxHeight=1000;maxWidth=1000"/>
+              </Media.Body>
+              <Media.Body>
+                <p>
+                  Microsoft - Wireless Controller for Xbox - Patrol Tech Special Edition
+                </p>
+                <Row className="show-grid">
+                  <Col md={6}>
+                    <strong>{`$${this.props.price}`}</strong>
+                    <br/>
+                    <strong className="price-strick">
+                      {`$${this.props.price}`}
+                    </strong>
+                  </Col>
+                  <Col md={6}>Qty:1 </Col>
+                </Row>
+              </Media.Body>
+
             </Media>
-          </Well>
+          </div>
         </Collapse>
       </div>
 
     )
   }
 }
-export default TaxesFees;
+export default ItemDetails;

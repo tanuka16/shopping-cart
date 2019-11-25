@@ -20,3 +20,8 @@
 .item-details-button:focus{
   outline: none;
 }
+
+.price-strike{
+  text-decoration-line: line-through;
+  color: grey; 
+}
