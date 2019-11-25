@@ -17,8 +17,20 @@ class TaxesFees extends Component{
             {this.state.open === false ? `See` : `Hide`} item details
             {this.state.open === false ? `+` : `-`}
         </Button>
+        <Collapse in={this.state.open}>
+          <Well>
+            <Media>
+              <Media.Left>
+                <img
+                width={100}
+                height={100}
+                alt="thumbnail"
+                src=""/>
+            </Media>
+          </Well>
+        </Collapse>
       </div>
-      
+
     )
   }
 }

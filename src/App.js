@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import SubtTotal from './components/Subtotal/Subtotal';
-import  PickUpSavings from "./components/PickUpSavings/PickUpSavings"
-import  TaxesFees from "./components/TaxesFees/TaxesFees"
-import  EstimatedTotal from "./components/EstimatedTotal/EstimatedTotal"
-
+import PickUpSavings from "./components/PickUpSavings/PickUpSavings";
+import TaxesFees from "./components/TaxesFees/TaxesFees";
+import EstimatedTotal from "./components/EstimatedTotal/EstimatedTotal";
+import ItemDetails from "./components/ItemDetails/ItemDetails";
 import './App.css';
 
 class App extends Component {
@@ -28,7 +28,9 @@ class App extends Component {
         <SubtTotal price={this.state.total.toFixed(2)}/>
         <PickUpSavings price={this.state.PickUpSavings} />
         <TaxesFees taxes={this.state.taxes.toFixed(2)}/>
+        <hr/>
         <EstimatedTotal price={this.state.estimatedTotal.toFixed(2)}/>
+        <ItemDetails/>
       </Container>
     </div>
   );
