@@ -6,6 +6,7 @@ import PickUpSavings from "./components/PickUpSavings/PickUpSavings";
 import TaxesFees from "./components/TaxesFees/TaxesFees";
 import EstimatedTotal from "./components/EstimatedTotal/EstimatedTotal";
 import ItemDetails from "./components/ItemDetails/ItemDetails";
+import PromoCode from "./components/PromoCode/PromoCode"
 import './App.css';
 
 class App extends Component {
@@ -16,10 +17,13 @@ class App extends Component {
       total: 100,
       PickUpSavings: -3.85,
       taxes: 0,
-      estimatedTotal: 0
+      estimatedTotal: 0,
+      disabledPromoButton: false
     }
 
   }
+
+
   render(){
   return (
     <div className="container">
@@ -32,6 +36,10 @@ class App extends Component {
         <EstimatedTotal price={this.state.estimatedTotal.toFixed(2)}/>
         <ItemDetails price={this.state.estimatedTotal.toFixed(2)}/>
         <hr/>
+        <PromoCode
+          giveDiscount={()=> this.giveDiscountHandler()}
+          isDisabled={this.state.disabledPromoButton}
+        />
       </Container>
     </div>
   );
