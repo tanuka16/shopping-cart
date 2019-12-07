@@ -23,5 +23,9 @@
 
 .price-strike{
   text-decoration-line: line-through;
-  color: grey; 
+  color: grey;
+}
+.promo-code-button:focus{
+  outline: none;
+
 }
