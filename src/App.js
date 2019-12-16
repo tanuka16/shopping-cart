@@ -23,6 +23,18 @@ class App extends Component {
 
   }
 
+  //lifecycle method
+  componentDidMount=()=>{
+    this.setState({
+      taxes: (this.state.total + this.state.PickUpSavings)* 0.0875
+    },
+    function(){
+      this.setState({
+        estimatedTotal:
+          this.state.total + this.state.PickUpSavings + this.state.taxes
+      })
+    })
+  }
 
   render(){
   return (

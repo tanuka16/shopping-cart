@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Collapse, Well, Row, Col, Form, FormGroup, FormLabel, FormControl } from 'react-bootstrap';
+import {Button, Collapse, Row, Col, Form, FormGroup, FormLabel, FormControl } from 'react-bootstrap';
 
 class PromoCodeDiscount extends Component{
   state={
