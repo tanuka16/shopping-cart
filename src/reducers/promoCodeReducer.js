@@ -1,13 +1,13 @@
-import { PROMO_CODE} from '../actions/types';
+import { PROMO_CODE} from '../actions/types.js';
 
 const initialState = {
-  open: false;
+  open: false,
   value: ''
 };
 
 export default function(state = initialState, action){
-  switch(action.type){
-    case PROME_CODE:
+  switch (action.type) {
+    case PROMO_CODE:
       return{
         ...state,
         value: action.payload
